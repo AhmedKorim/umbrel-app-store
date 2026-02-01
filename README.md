@@ -51,7 +51,7 @@ To add this app store to your Umbrel OS:
 
 1. Navigate to your Umbrel dashboard
 2. Go to App Store settings
-3. Add custom app store: `https://github.com/korrim/umbrel-app-store`
+3. Add custom app store: `https://github.com/AhmedKorim/umbrel-app-store`
 
 ## Contributing
 
