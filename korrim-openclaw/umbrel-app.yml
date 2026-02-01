@@ -1,17 +1,18 @@
 manifestVersion: 1
 id: korrim-openclaw
 name: OpenClaw
-tagline: Personal AI Assistant for Your Self-Hosted Infrastructure
+tagline: Personal AI Assistant with Telegram Integration
 icon: https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png
 category: developer
 version: "2025.01.27"
 port: 18789
 description: >-
   OpenClaw is a personal AI assistant you run on your own devices.
-  It answers you on the channels you already use (WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat), plus extension channels like BlueBubbles, Matrix, Zalo, and Zalo Personal.
+  This installation is optimized for Telegram integration, allowing you to interact with your AI assistant directly through Telegram messages.
 
   Features:
-    * Multi-channel support (WhatsApp, Telegram, Slack, Discord, Signal, iMessage, Teams, and more)
+    * Telegram integration (primary channel)
+    * Multi-channel support (Slack, Discord, Signal, iMessage, Teams, and more)
     * Voice and canvas interaction on macOS/iOS/Android
     * WebSocket-based gateway control plane
     * Multi-agent routing with isolated workspaces
@@ -20,7 +21,7 @@ description: >-
     * Self-hosted and privacy-focused
     * Long-context model support (200K+ tokens)
     * OAuth and API key authentication
-    * Web-based Control UI
+    * Web-based Control UI for easy configuration
     * Tailscale integration for secure access
 
 developer: OpenClaw Community
@@ -38,5 +39,11 @@ path: ""
 # Configuration fields for OpenClaw
 # Optional: Configure Claude AI authentication (recommended for best experience)
 # You can use OAuth (via the web UI) or API keys
+
+# Telegram Configuration
+# To set up Telegram:
+# 1. Create a bot via @BotFather on Telegram
+# 2. Get your bot token from BotFather
+# 3. Add the bot token to your OpenClaw config through the web UI
 defaultUsername: ""
 defaultPassword: ""
