@@ -41,10 +41,23 @@ After installing OpenClaw, you'll configure it through the web UI at `http://you
 
 **Getting Started:**
 After installation:
-1. Open the OpenClaw web UI at `http://your-umbrel-ip:18789`
-2. Run the onboarding wizard to configure Telegram and AI models
-3. Start chatting with your AI assistant in Telegram
-4. Use voice messages and other interactive features
+1. Set up SSH tunnel for secure localhost access:
+   ```bash
+   ssh -L 18789:localhost:18789 umbrel@your-umbrel-ip
+   ```
+2. Get your gateway token:
+   - Right-click the OpenClaw app icon in Umbrel
+   - Select "Show default credentials"
+   - Copy the gateway token
+3. Access the Control UI:
+   ```
+   http://localhost:18789/?token=YOUR_GATEWAY_TOKEN
+   ```
+4. Run the onboarding wizard to configure Telegram and AI models
+5. Start chatting with your AI assistant in Telegram
+6. Use voice messages and other interactive features
+
+**Note:** SSH tunneling is required because OpenClaw's Control UI requires a secure context (HTTPS or localhost). The SSH tunnel makes it accessible as localhost on your machine.
 
 **Documentation:**
 - Official Docs: https://docs.openclaw.ai
