@@ -18,13 +18,17 @@ if [ ! -f "${CONFIG_DIR}/gateway.json" ]; then
   GATEWAY_TOKEN="${APP_PASSWORD}"
 
   # Create minimal gateway.json configuration with authentication
+  # Allow insecure auth for HTTP/LAN access (Umbrel doesn't use HTTPS)
   cat > "${CONFIG_DIR}/gateway.json" <<EOF
 {
   "gateway": {
     "mode": "local",
     "port": 18789,
     "bind": "lan",
-    "token": "${GATEWAY_TOKEN}"
+    "token": "${GATEWAY_TOKEN}",
+    "controlUi": {
+      "allowInsecureAuth": true
+    }
   },
   "agents": {
     "defaults": {
