@@ -14,13 +14,17 @@ mkdir -p "${WORKSPACE_DIR}"
 if [ ! -f "${CONFIG_DIR}/gateway.json" ]; then
   echo "Initializing OpenClaw configuration..."
 
-  # Create minimal gateway.json configuration
+  # Get the gateway token from environment (set by Umbrel)
+  GATEWAY_TOKEN="${APP_PASSWORD}"
+
+  # Create minimal gateway.json configuration with authentication
   cat > "${CONFIG_DIR}/gateway.json" <<EOF
 {
   "gateway": {
     "mode": "local",
     "port": 18789,
-    "bind": "lan"
+    "bind": "lan",
+    "token": "${GATEWAY_TOKEN}"
   },
   "agents": {
     "defaults": {
@@ -31,6 +35,7 @@ if [ ! -f "${CONFIG_DIR}/gateway.json" ]; then
 EOF
 
   echo "OpenClaw configuration initialized successfully."
+  echo "Gateway token has been configured for LAN access."
 else
   echo "OpenClaw configuration already exists, skipping initialization."
 fi

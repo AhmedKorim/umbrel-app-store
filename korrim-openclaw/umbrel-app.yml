@@ -28,6 +28,8 @@ description: >-
 
   Right-click the app icon and select "Show default credentials" to see your auto-generated gateway token.
 
+  IMPORTANT: When accessing the web UI, you'll need to authenticate using the gateway token from "Show default credentials".
+
   After installation, access the OpenClaw web UI at port 18789 to configure:
 
   1. Telegram Setup:
