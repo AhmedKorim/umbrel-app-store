@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# OpenClaw pre-start hook for Umbrel
+# This script initializes OpenClaw configuration on first run
+
+CONFIG_DIR="${APP_DATA_DIR}/data/config"
+WORKSPACE_DIR="${APP_DATA_DIR}/data/workspace"
+
+# Create directories if they don't exist
+mkdir -p "${CONFIG_DIR}"
+mkdir -p "${WORKSPACE_DIR}"
+
+# Check if config already exists
+if [ ! -f "${CONFIG_DIR}/gateway.json" ]; then
+  echo "Initializing OpenClaw configuration..."
+
+  # Create minimal gateway.json configuration
+  cat > "${CONFIG_DIR}/gateway.json" <<EOF
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "bind": "lan"
+  },
+  "agents": {
+    "defaults": {
+      "model": "anthropic/claude-sonnet-4-20250514"
+    }
+  }
+}
+EOF
+
+  echo "OpenClaw configuration initialized successfully."
+else
+  echo "OpenClaw configuration already exists, skipping initialization."
+fi
+
+exit 0

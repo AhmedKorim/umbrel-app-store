@@ -20,8 +20,8 @@ OpenClaw is a personal AI assistant you run on your own devices. This installati
 **Installation:**
 1. Add this app store to your Umbrel OS
 2. Install OpenClaw from the store
-3. Wait for the installation to complete
-4. Access the web UI at port 18789 for configuration
+3. The app will automatically initialize with basic configuration
+4. Access the web UI at port 18789 for further configuration
 
 **Configuration (After Installation):**
 
