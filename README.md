@@ -20,32 +20,35 @@ OpenClaw is a personal AI assistant you run on your own devices. This installati
 **Installation:**
 1. Add this app store to your Umbrel OS
 2. Install OpenClaw from the store
-3. Configure your AI provider credentials (optional but recommended)
-4. Set up Telegram bot (see below)
-5. Access the web UI at port 18789
+3. Configure settings during installation (see below)
+4. Access the web UI at port 18789
 
-**Telegram Setup:**
-1. Open Telegram and search for @BotFather
-2. Send `/newbot` and follow the instructions to create your bot
-3. Copy the bot token provided by BotFather
-4. Access the OpenClaw web UI at `http://your-umbrel-ip:18789`
-5. Navigate to channel settings and add your Telegram bot token
-6. Start a conversation with your bot in Telegram
+**Configuration (During Installation):**
 
-**Configuration:**
-OpenClaw supports several optional environment variables for AI authentication:
+When installing OpenClaw, you'll be prompted to configure:
 
-- `OPENCLAW_GATEWAY_TOKEN`: Gateway authentication token (auto-generated if not provided)
-- `CLAUDE_AI_SESSION_KEY`: Anthropic Claude AI session key for OAuth authentication (recommended)
-- `CLAUDE_WEB_SESSION_KEY`: Anthropic Claude web session key
-- `CLAUDE_WEB_COOKIE`: Anthropic Claude web cookie
+1. **Claude AI Session Key** (Optional but recommended)
+   - Your Anthropic Claude AI session key for OAuth authentication
+   - Leave empty to configure later through the web UI
+   - Recommended for best performance with Claude models
+
+2. **Telegram Bot Token** (Required for Telegram integration)
+   - Create a bot via @BotFather on Telegram
+   - Send `/newbot` and follow the instructions
+   - Copy the bot token (looks like `123456789:ABCdefGHI...`)
+   - Paste it in the installation form
+   - Leave empty to configure later through the web UI
+
+3. **Gateway Token** (Optional)
+   - Custom gateway authentication token
+   - Leave empty to auto-generate a secure token
 
 **Getting Started:**
-After installation, you can:
-1. Use the web Control UI at `http://your-umbrel-ip:18789`
-2. Run the onboarding wizard to configure Telegram and AI models
-3. Start chatting with your AI assistant in Telegram
-4. Use voice messages and other interactive features
+After installation:
+1. Find your Telegram bot and start a conversation
+2. Access the web Control UI at `http://your-umbrel-ip:18789` for advanced configuration
+3. Run the onboarding wizard to configure additional channels and AI models
+4. Start chatting with your AI assistant in Telegram
 
 **Documentation:**
 - Official Docs: https://docs.openclaw.ai

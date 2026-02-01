@@ -37,13 +37,55 @@ dependencies:
 path: ""
 
 # Configuration fields for OpenClaw
-# Optional: Configure Claude AI authentication (recommended for best experience)
-# You can use OAuth (via the web UI) or API keys
+# Configure these settings in the Umbrel UI during installation
+settings:
+  # Claude AI Authentication (Optional but recommended)
+  - id: CLAUDE_AI_SESSION_KEY
+    label: Claude AI Session Key
+    description: >-
+      Optional: Your Anthropic Claude AI session key for OAuth authentication.
+      Leave empty to configure later through the OpenClaw web UI.
+      Recommended for best performance with Claude models.
+    type: text
+    defaultValue: ""
+    showOnlyOnFirstInstall: true
 
-# Telegram Configuration
-# To set up Telegram:
-# 1. Create a bot via @BotFather on Telegram
-# 2. Get your bot token from BotFather
-# 3. Add the bot token to your OpenClaw config through the web UI
-defaultUsername: ""
-defaultPassword: ""
+  - id: CLAUDE_WEB_SESSION_KEY
+    label: Claude Web Session Key
+    description: >-
+      Optional: Your Anthropic Claude web session key.
+      Leave empty if not using Claude or to configure later.
+    type: text
+    defaultValue: ""
+    showOnlyOnFirstInstall: true
+
+  - id: CLAUDE_WEB_COOKIE
+    label: Claude Web Cookie
+    description: >-
+      Optional: Your Anthropic Claude web cookie.
+      Leave empty if not using Claude or to configure later.
+    type: password
+    defaultValue: ""
+    showOnlyOnFirstInstall: true
+
+  # Telegram Bot Configuration
+  - id: TELEGRAM_BOT_TOKEN
+    label: Telegram Bot Token
+    description: >-
+      Your Telegram bot token from @BotFather.
+      To get a token: 1) Open Telegram, 2) Search for @BotFather, 3) Send /newbot, 4) Follow instructions, 5) Copy the token
+      Leave empty to configure later through the OpenClaw web UI.
+    type: password
+    defaultValue: ""
+    showOnlyOnFirstInstall: true
+
+  # Gateway Configuration
+  - id: OPENCLAW_GATEWAY_TOKEN
+    label: Gateway Token
+    description: >-
+      Optional: Custom gateway authentication token.
+      Leave empty to auto-generate a secure token.
+    type: password
+    defaultValue: ""
+    showOnlyOnFirstInstall: true
+
