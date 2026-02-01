@@ -26,7 +26,9 @@ description: >-
 
   🛠️ CONFIGURATION
 
-  After installation, access the OpenClaw web UI to configure:
+  Right-click the app icon and select "Show default credentials" to see your auto-generated gateway token.
+
+  After installation, access the OpenClaw web UI at port 18789 to configure:
 
   1. Telegram Setup:
      - Create a bot via @BotFather on Telegram
@@ -52,4 +54,6 @@ releaseNotes:
   - Initial release on Umbrel App Store
 dependencies:
 path: ""
+deterministicPassword: true
+
 
