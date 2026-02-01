@@ -4,7 +4,7 @@ name: OpenClaw
 tagline: Personal AI Assistant with Telegram Integration
 icon: https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png
 category: developer
-version: "2025.02.06"
+version: "2025.02.07"
 port: 18789
 description: >-
   OpenClaw is a personal AI assistant you run on your own devices.
